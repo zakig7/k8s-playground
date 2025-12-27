@@ -45,6 +45,20 @@ Each component includes:
 
 ### Apply all manifests
 
+1. Validate YAML syntax
+
+```sh
+find . -name "*.yaml" -print0 | xargs -0 yamllint
+```
+
+1.Validate the strcuture of K8s Manifests
+
+```sh
+kubectl apply --dry-run=client -f .
+```
+
+1. Use `kind` or `minikube` to test against a real cluster
+
 To deploy all example workloads:
 
 ```sh
@@ -72,6 +86,14 @@ Check HPAs:
 ```sh
 kubectl get hpa
 ```
+
+Watch for:
+
+- Pods stuck in CrashLoopBackOff
+
+- Services that don’t expose ports
+
+- ConfigMaps that aren’t referenced correctly
 
 ### Expose or Access Services
 
