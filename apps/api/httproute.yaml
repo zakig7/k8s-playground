@@ -1,17 +1,18 @@
 apiVersion: gateway.networking.k8s.io/v1
 kind: HTTPRoute
 metadata:
-  name: web-httproute
+  name: api-httproute
+  namespace: playground
 spec:
   parentRefs:
     - name: app-gateway
   hostnames:
-    - "synchat.internal"
+    - "synchatapi.internal"
   rules:
     - matches:
         - path:
             type: PathPrefix
             value: /
       backendRefs:
-        - name: web-service
+        - name: api-service
           port: 80

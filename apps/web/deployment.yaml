@@ -4,6 +4,7 @@ metadata:
   labels:
     app: synergychat-web
   name: synergychat-web
+  namespace: playground
 spec:
   selector:
     matchLabels:

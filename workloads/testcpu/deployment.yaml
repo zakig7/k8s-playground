@@ -4,6 +4,7 @@ metadata:
   labels:
     app: synergychat-testcpu
   name: synergychat-testcpu
+  namespace: playground
 spec:
   selector:
     matchLabels:

@@ -1,0 +1,8 @@
+resources:
+  - namespaces/
+  - gateway/
+  - apps/api/
+  - apps/web/
+  - apps/crawler/
+  - workloads/testcpu/
+  - workloads/testram/

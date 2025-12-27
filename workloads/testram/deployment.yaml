@@ -4,6 +4,7 @@ metadata:
   labels:
     app: synergychat-testram
   name: synergychat-testram
+  namespace: playground
 spec:
   replicas: 1
   selector:
